@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projeto Abelhas da Mata - Ribeirão Pires: Preservando Abelhas, Cultivando Futuro</title>
+        <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../components/biblio/biblio.css">
+    </head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="../img/logo.png" alt="Logo Projeto Condomel" class="logo-img para-pc">
+                Abelhas da Mata
+            </a>
+    
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar">&nbsp;</span>
+                <span class="bar">&nbsp;</span>
+                <span class="bar">&nbsp;</span>
+            </div>
+    
+            <ul class="navbar-menu">
+                <div class="para-mobile">
+                    <div class="profile-container">
+                        <i class="fas fa-user profile-icon" onclick="window.location.href='login.html';"></i>
+                    </div>
+                </div>
+    
+                <li><a href="sobre.html">Sobre o Projeto</a></li>
+                <li><a href="biblio.html">Biblioteca</a></li>
+
+                <li><a href="comunidade.html">Comunidade</a></li>
+
+                <div id="accessibility-bar">
+                    <button id="increase-font" title="Aumentar tamanho da fonte">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button id="decrease-font" title="Diminuir tamanho da fonte">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button id="high-contrast" title="Alto contraste">
+                        <i class="fas fa-adjust"></i>
+                    </button>
+                    <button id="color-blind-toggle" title="Opções de daltonismo">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+    
+                <div id="color-blind-options" class="hidden">
+                    <button data-filter="protanopia">Protanopia</button>
+                    <button data-filter="protanomaly">Protanomalia</button>
+                    <button data-filter="deuteranopia">Deuteranopia</button>
+                    <button data-filter="deuteranomaly">Deuteranomalia</button>
+                    <button data-filter="tritanopia">Tritanopia</button>
+                    <button data-filter="tritanomaly">Tritanomalia</button>
+                    <button data-filter="achromatopsia">Acromatopsia</button>
+                    <button data-filter="achromatomaly">Acromatopsia Parcial</button>
+                    <button data-filter="normal">Visão Normal</button>
+                </div>
+    
+                <div class="para-pc">
+                    <div class="profile-container">
+                        <i class="fas fa-user profile-icon" onclick="window.location.href='login.html';"></i>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <div class="content-wrapper" id="content-wrapper">
+
+        <main>
+            <div class="content-wrapper">
+                <section class="hero">
+                    <h1>Biblioteca</h1>
+                    <p class="subtitle">Esta página contém artigos e estudos em PDF sobre abelhas. Explore e aprenda mais sobre a importância e conservação desses insetos.</p>
+                </section>
+        
+                <div class="library-item">
+                    <div class="thumb">
+                        <img src="../img/thumbs/livro-pedagogico.png" alt="Abelhas nativas brasileiras" class="pdf-cover">
+                    </div>
+                    <div class="description">
+                        <h2>Abelhas Nativas Brasileiras - Conservação Ambiental</h2>
+                        <p>Explore a importância das abelhas nativas brasileiras para o meio ambiente e as comunidades indígenas neste livro infantil.</p>
+                        <a href="../pdfs/Abelhas nativas brasileiras livro pedagógico.pdf" target="_blank">Baixar PDF</a>
+                    </div>
+                </div>
+                
+                <hr class="separator">
+                
+                <div class="library-item reverse">
+                    <div class="thumb">
+                        <img src="../img/thumbs/identificacao.png" alt="Abelhas Brasileiras">
+                    </div>
+                    <div class="description">
+                        <h2>Abelhas Brasileiras - Sistemática e Identificação</h2>
+                        <p>Este guia detalha a sistemática e identificação das abelhas brasileiras, incluindo morfologia, coleta e conservação.</p>
+                        <a href="../pdfs/Abelhas-Brasileiras-Sistematica-e-Identificacao.pdf" target="_blank">Baixar PDF</a>
+                    </div>
+                </div>
+                
+                <hr class="separator">
+                
+                <div class="library-item">
+                    <div class="thumb">
+                        <img src="../img/thumbs/caderneta.png" alt="Caderneta Abelhas da Mata">
+                    </div>
+                    <div class="description">
+                        <h2>Caderneta ABELHAS DA MATA</h2>
+                        <p>Conheça a iniciativa de preservação das abelhas nativas sem ferrão e sua importância para o meio ambiente e a biodiversidade na cidade.</p>
+                        <a href="../pdfs/Caderneta-ABELHAS-DA-MATA-Atualizado-agosto 2023.versão leve.pdf" target="_blank">Baixar PDF</a>
+                    </div>
+                </div>
+        
+                <hr class="separator">
+        
+                <div class="library-item reverse">
+                    <div class="thumb">
+                        <img src="../img/thumbs/legislacao.png" alt="Legislação sobre abelhas nativas">
+                    </div>
+                    <div class="description">
+                        <h2>Legislação sobre meliponicultura no Brasil</h2>
+                        <p>Artigo que discute a legislação brasileira sobre meliponicultura, a criação de abelhas sem ferrão nativas.</p>
+                        <a href="../pdfs/Legislação abelhas nativas 2020.pdf" target="_blank">Baixar PDF</a>
+                    </div>
+                </div>
+        
+                <hr class="separator">
+        
+                <div class="library-item">
+                    <div class="thumb">
+                        <img src="../img/thumbs/diario.png" alt="Lei nº 14.639">
+                    </div>
+                    <div class="description">
+                        <h2>LEI Nº 14.639, DE 23 DE JULHO DE 2023</h2>
+                        <p>Lei que institui a Política Nacional de Incentivo à Produção Melífera.</p>
+                        <a href="../pdfs/LEI Nº 14.639, DE 23 DE JULHO DE 2023 - LEI Nº 14.639, DE 23 DE JULHO DE 2023 - DOU - Imprensa Nacional.pdf" target="_blank">Baixar PDF</a>
+                    </div>
+                </div>
+        
+                <hr class="separator">
+        
+                <div class="library-item reverse">
+                    <div class="thumb">
+                        <img src="../img/thumbs/manual.png" alt="Manual de Operação GEFAU">
+                    </div>
+                    <div class="description">
+                        <h2>Manual de Operação GEFAU -
+                            Módulo Manejo de
+                            Abelhas Nativas v 5.0</h2>
+                        <p>Manual de instruções sobre como usar o Sistema Integrado de Gestão de Fauna Silvestre (GEFAU).</p>
+                        <a href="../pdfs/Manual_de_Operao_GEFAU_-_Mdulo_Manejo_de_Abelhas_Nativas_v_5_15SET21.pdf" target="_blank">Baixar PDF</a>
+                    </div>
+                </div>
+                
+        
+                <hr class="separator">
+        
+                <div class="library-item">
+                    <div class="thumb">
+                        <img src="../img/thumbs/mundo.png" alt="Mundo das abelhas nativas">
+                    </div>
+                    <div class="description">
+                        <h2>Desvendando o mundo das abelhas nativas</h2>
+                        <p>Livro sobre as abelhas nativas do Brasil, com informações sobre suas características, função ecológica e os desafios que enfrentam.</p>
+                        <a href="../pdfs/Mundo das abelhas nativas.pdf" target="_blank">Baixar PDF</a>
+                    </div>
+                </div>
+        
+                <hr class="separator">
+        
+                <div class="library-item reverse">
+                    <div class="thumb">
+                        <img src="../img/thumbs/diario2.png" alt="Resolução CONAMA nº 496">
+                    </div>
+                    <div class="description">
+                        <h2>RESOLUÇÃO Nº 496, DE 19 DE AGOSTO DE 2020</h2>
+                        <p>Resolução que disciplina o uso e o manejo sustentáveis das abelhas-nativas-sem-ferrão em meliponicultura.</p>
+                        <a href="../pdfs/RESOLUÇÃO Nº 496, DE 19 DE AGOSTO DE 20...pdf" target="_blank">Baixar PDF</a>
+                    </div>
+                </div>
+        
+                <hr class="separator">
+
+                <div class="library-item">
+                    <div class="thumb">
+                        <img src="../img/thumbs/guia.png" alt="Guia Ilustrado das Abelhas Sem-Ferrão">
+                    </div>
+                    <div class="description">
+                        <h2>Guia Ilustrado das Abelhas “Sem-Ferrão” das Reservas Amanã e Mamirauá, Brasil</h2>
+                        <p>Identifica espécies de abelhas sem ferrão nas Reservas de Amanã e Mamirauá, descrevendo características taxonômicas, distribuição geográfica e hábitos de nidificação.</p>
+                        <a href="../pdfs/novos/Guia Ilustrado das Abelhas “Sem-Ferrão” das Reservas Amanã e Mamirauá, Brasil.pdf" target="_blank">Baixar PDF</a>
+                    </div>
+                </div>
+                
+                <hr class="separator">
+                
+                <div class="library-item reverse">
+                    <div class="thumb">
+                        <img src="../img/thumbs/vida-e-criacao.png" alt="Vida e Criação de Abelhas Indígenas Sem Ferrão">
+                    </div>
+                    <div class="description">
+                        <h2>Vida e Criação de Abelhas Indígenas Sem Ferrão</h2>
+                        <p>Guia abrangente sobre a vida e o manejo de abelhas sem ferrão, com foco em sua importância para a ecologia e a cultura brasileira.</p>
+                        <a href="../pdfs/novos/livro abelhas sem ferrão paulo nogueira neto.pdf" target="_blank">Baixar PDF</a>
+                    </div>
+                </div>
+                
+                <hr class="separator">
+                
+                <div class="library-item">
+                    <div class="thumb">
+                        <img src="../img/thumbs/criacao.png" alt="Criação de Abelhas Indígenas Sem Ferrão">
+                    </div>
+                    <div class="description">
+                        <h2>Criação de Abelhas Indígenas Sem Ferrão</h2>
+                        <p>Guia prático para a criação de abelhas sem ferrão na Amazônia, destacando sua importância para a agricultura sustentável e a conservação da biodiversidade.</p>
+                        <a href="../pdfs/novos/livro-abelha2014.pdf" target="_blank">Baixar PDF</a>
+                    </div>
+                </div>
+                
+                <hr class="separator">
+                
+                <div class="library-item reverse">
+                    <div class="thumb">
+                        <img src="../img/thumbs/manual-manejo.png" alt="Manual de Manejo de Abelhas sem Ferrão">
+                    </div>
+                    <div class="description">
+                        <h2>Manual de Manejo de Abelhas sem Ferrão</h2>
+                        <p>Guia prático para a criação e manejo de abelhas sem ferrão, com foco em sua importância para a agricultura sustentável e a conservação.</p>
+                        <a href="../pdfs/novos/ManualAbelhas.pdf" target="_blank">Baixar PDF</a>
+                    </div>
+                </div>
+                
+                <hr class="separator">
+                
+                <div class="library-item">
+                    <div class="thumb">
+                        <img src="../img/thumbs/boletim.png" alt="Meliponicultura - Epagri SC">
+                    </div>
+                    <div class="description">
+                        <h2>Boletim Didático nº 141: Meliponicultura</h2>
+                        <p>Visão geral da criação de abelhas sem ferrão, destacando sua importância para a polinização e a produção de mel.</p>
+                        <a href="../pdfs/novos/Meliponicultura-Epagri-SC.pdf" target="_blank">Baixar PDF</a>
+                    </div>
+                </div>
+                <hr class="separator">
+<div class="especifico">
+<div class="library-item reverse">  
+    <div class="thumb">
+        <img src="../img/thumbs/importantes.png" alt="Abelhas sem ferrão relevantes para a meliponicultura no Brasil">
+    </div>
+    <div class="description">
+        <h2>Abelhas sem ferrão relevantes para a meliponicultura no Brasil</h2>
+        <p>coleção de fichas catalográficas de 60 espécies de abelhas sem ferrão, selecionadas a partir do Catálogo Nacional de Abelhas-Nativas-Sem-Ferrão</p>
+        <a href="../pdfs/novos/Abelhas_sem_ferrao_relevantes_para_a_meliponicultura_no_Brasil-v-1-0.pdf" target="_blank">Baixar PDF</a>
+    </div>
+</div>
+</div> 
+            </div>
+        </main>
+        
+        
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h3>Contato</h3>
+                        <p>Email: contato@projetoabelhasdamata.com</p>
+                        <p>Telefone: (11) 1234-5678</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Links Rápidos</h3>
+                        <ul>
+                            <li><a href="/sobre">Sobre o Projeto</a></li>
+                            <li><a href="/comunidade">Comunidade</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Redes Sociais</h3>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook">
+                                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Instagram">
+                                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Twitter">
+                                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Projeto Abelhas da mata. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <div class="scroll fixed-position" id="scroll">
+        <div class="scroll-to-top" id="scrollToTop">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </div>
+
+    <div class="libras" id="libras">
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+    </div>
+
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  
+<script src="../utils/accessibility.js"></script>
+<script src="../utils/menu-mobile.js"></script> 
+<script src="../components/login/change-form.js"></script>
+<script src="../utils/scroll.js"></script>
+<script src="../components/biblio/biblio.js"></script>
+
+<script>
+    const highContrastButton = document.getElementById('high-contrast');
+    const contentWrapper = document.getElementById('content-wrapper');
+    const navbar = document.getElementById('navbar');
+    const libras_scroll = document.getElementById('scroll');
+    const libras = document.getElementById('libras');
+
+
+    highContrastButton.addEventListener('click', () => {
+        contentWrapper.classList.toggle('high-contrast');
+        navbar.classList.toggle('high-contrast');
+        libras_scroll.classList.toggle('high-contrast')
+        libras.classList.toggle('high-contrast')
+        libras_scroll.style.position = 'fixed';
+        libras.style.position = 'fixed';
+
+        const elements = document.querySelectorAll('.hero, .card, .pepta-section, main, footer, .scroll-to-top, nav, .bar, .auth-content, .auth-tabs, .navbar high-contrast, .navbar-container');
+
+        elements.forEach(element => {
+            if (element.style.border && element.style.borderRadius) {
+                element.style.border = '';
+                element.style.borderRadius = '';
+            } else {
+                element.style.border = '1px solid var(--borda-color)';
+                element.style.borderRadius = '10px';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

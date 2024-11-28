@@ -1,0 +1,144 @@
+
+    .condomeis-page {
+        padding-top: 80px; 
+    }
+    
+    .condomeis-intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 4rem;
+        padding: 2rem;
+        background-color: var(--card-bg);
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .condomeis-intro h2 {
+        color: var(--accent-color);
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .condomeis-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    .condomel-card {
+        background-color: var(--card-bg);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .condomel-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .condomel-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .card-content {
+        padding: 1.5rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .condomel-card h2 {
+        color: var(--accent-color);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .condomel-card p {
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+    }
+    
+    .learn-more {
+        align-self: flex-start;
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .learn-more:hover {
+        background-color: var(--accent-color);
+    }
+    
+    .circuito-abelhas,
+    .importancia-abelhas {
+        background-color: var(--card-bg);
+        border-radius: 15px;
+        padding: 3rem;
+        margin-bottom: 4rem;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .circuito-highlights,
+    .importancia-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .highlight-item,
+    .importancia-item {
+        text-align: center;
+        padding: 1.5rem;
+        background-color: rgba(255, 160, 0, 0.1);
+        border-radius: 15px;
+        border: 1px solid var(--primary-color);
+        transition: transform 0.3s ease;
+    }
+    
+    .highlight-item:hover,
+    .importancia-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .highlight-item i,
+    .importancia-item i {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+    
+    .highlight-item h3,
+    .importancia-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: var(--accent-color);
+    }
+    
+    @media (max-width: 768px) {
+        .condomeis-grid {
+            grid-template-columns: 1fr;
+            padding: 0;
+            margin-bottom: 1em;
+        }
+    
+        .circuito-highlights,
+        .importancia-grid {
+            grid-template-columns: 1fr;
+        }
+        .condomeis-intro h2{
+            font-size: 1.5rem;
+        }
+        
+        
+    }
